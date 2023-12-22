@@ -1,0 +1,21 @@
+export default {
+  customId: "modal-exm",
+
+  options: {
+    public: false,
+  },
+
+  /**
+   *
+   * @param {import("../../Class/Client.js").default} client
+   * @param {import("discord.js").ModalSubmitInteraction} _
+   */
+  run: async (client, _) => {
+    const value = _.fields.getTextInputValue("value");
+
+    await _.reply({
+      content: `${value}$`,
+      ephemeral: true,
+    });
+  },
+};

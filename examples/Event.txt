@@ -1,0 +1,12 @@
+import { Events } from "discord.js";
+
+export default {
+  event: Events.ClientReady,
+
+  /**
+   *
+   * @param {import("../../Class/Client.js").default} client
+   * @param {import("discord.js").Interaction} _
+   */
+  run: async (client, _) => {},
+};

@@ -1,0 +1,14 @@
+import { ApplicationCommandType, ContextMenuCommandBuilder } from "discord.js";
+
+export default {
+  struct: new ContextMenuCommandBuilder() // Chain
+    .setName("")
+    .setType(ApplicationCommandType.Message),
+
+  /**
+   *
+   * @param {import("../../Class/Client.js").default} client
+   * @param {import("discord.js").MessageContextMenuCommandInteraction} _
+   */
+  run: async (client, _) => {},
+};

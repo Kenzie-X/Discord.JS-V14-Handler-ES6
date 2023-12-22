@@ -1,0 +1,21 @@
+export default {
+  customId: "select-exm",
+
+  options: {
+    public: false,
+  },
+
+  /**
+   *
+   * @param {import("../../Class/Client.js").default} client
+   * @param {import("discord.js").StringSelectMenuInteraction} _
+   */
+  run: async (client, _) => {
+    const value = _.values[0];
+
+    await _.reply({
+      content: `You've selected \`${value}\` from the menu.`,
+      ephemeral: true,
+    });
+  },
+};

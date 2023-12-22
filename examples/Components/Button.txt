@@ -1,0 +1,19 @@
+export default {
+  customId: "button-exm",
+
+  options: {
+    public: false,
+  },
+
+  /**
+   *
+   * @param {import("../../Class/Client.js").default} client
+   * @param {import("discord.js").ButtonInteraction} _
+   */
+  run: async (client, _) => {
+    await _.reply({
+      content: "You clicked me!",
+      ephemeral: true,
+    });
+  },
+};

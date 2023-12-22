@@ -1,0 +1,23 @@
+export default {
+  commandName: "autocomplete",
+
+  options: {
+    public: true,
+  },
+
+  /**
+   *
+   * @param {import("../../Class/Client.js").default} client
+   * @param {import("discord.js").AutocompleteInteraction} _
+   */
+  run: async (client, _) => {
+    const currentInput = _.options.getFocused();
+
+    const cars = ["BMW", "Koenigsegg", "Audi", "GTR"];
+    const filteredCars = cars.filter((car) => {
+      car.toLowerCase().startsWith(currentInput.toLowerCase());
+    });
+
+    await _.respond(filteredCars.map((car) => ({ name: car, value: car })));
+  },
+};

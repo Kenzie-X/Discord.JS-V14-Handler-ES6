@@ -1,0 +1,16 @@
+export default {
+  struct: {
+    name: "",
+    description: "",
+    aliases: [],
+    permissions: null,
+  },
+
+  /**
+   *
+   * @param {import("../../Class/Client.js").default} client
+   * @param {import("discord.js").Message} _
+   * @param {string[]} args
+   */
+  run: async (client, _, args) => {},
+};

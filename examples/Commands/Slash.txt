@@ -1,0 +1,14 @@
+import { SlashCommandBuilder } from "discord.js";
+
+export default {
+  struct: new SlashCommandBuilder() // Chain
+    .setName("")
+    .setDescription(""),
+
+  /**
+   *
+   * @param {import("../../Class/Client.js").default} client
+   * @param {import("discord.js").ChatInputCommandInteraction} _
+   */
+  run: async (client, _) => {},
+};
